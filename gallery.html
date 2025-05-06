@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Sun City Public School</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <span><i class="fas fa-phone"></i> +91 9876543210</span>
+                <span><i class="fas fa-envelope"></i> info@suncitypublicschool.com</span>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Sun City Public School Logo">
+                <div class="logo-text">
+                    <h1>Sun City Public School</h1>
+                    <p>Line Par, Moradabad, Uttar Pradesh, India</p>
+                    <p>Affiliated to CBSE</p>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="facilities.html">Facilities</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Gallery Hero -->
+    <section class="page-hero" style="background-image: linear-gradient(rgba(26, 75, 140, 0.8), rgba(13, 43, 78, 0.8)), url('images/gallery-hero.jpg');">
+        <div class="container">
+            <h1>School Gallery</h1>
+            <p>Capturing memorable moments at Sun City Public School</p>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>Gallery</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="campus">Campus</button>
+                <button class="filter-btn" data-filter="events">Events</button>
+                <button class="filter-btn" data-filter="sports">Sports</button>
+                <button class="filter-btn" data-filter="activities">Activities</button>
+                <button class="filter-btn" data-filter="achievements">Achievements</button>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="campus">
+                    <img src="images/gallery/campus1.jpg" alt="School Building">
+                    <div class="overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <p>Main School Building</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="campus">
+                    <img src="images/gallery/campus2.jpg" alt="School Playground">
+                    <div class="overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <p>School Playground</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="events">
+                    <img src="images/gallery/event1.jpg" alt="Annual Day">
+                    <div class="overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <p>Annual Day Celebration</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="events">
+                    <img src="images/gallery/event2.jpg" alt="Republic Day">
+                    <div class="overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <p>Republic Day Celebration</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="sports">
+                    <img src="images/gallery/sports1.jpg" alt="Sports Day">
+                    <div class="overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <p>Annual Sports Day</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="sports">
+                    <img src="images/gallery/sports2.jpg" alt="Cricket Match">
+                    <div class="overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <p>Inter-school Cricket Match</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="activities">
+                    <img src="images/gallery/activity1.jpg" alt="Science Fair">
+                    <div class="overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <p>Science Fair Exhibition</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="activities">
+                    <img src="images/gallery/activity2.jpg" alt="Art Class">
+                    <div class="overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <p>Art and Craft Class</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="achievements">
+                    <img src="images/gallery/achievement1.jpg" alt="Award Ceremony">
+                    <div class="overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <p>Student Award Ceremony</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="achievements">
+                    <img src="images/gallery/achievement2.jpg" alt="Topper Students">
+                    <div class="overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <p>CBSE Topper Students</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="events">
+                    <img src="images/gallery/event3.jpg" alt="Independence Day">
+                    <div class="overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <p>Independence Day Celebration</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="activities">
+                    <img src="images/gallery/activity3.jpg" alt="Music Class">
+                    <div class="overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <p>Music and Dance Class</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Gallery -->
+    <section class="video-gallery">
+        <div class="container">
+            <h2 class="section-title">Video Gallery</h2>
+            <div class="video-grid">
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3>Annual Day 2023 Highlights</h3>
+                </div>
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3>Sports Day 2023</h3>
+                </div>
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3>School Campus Tour</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col about-col">
+                    <h3>About School</h3>
+                    <p>Sun City Public School was established in 2006 with the aim to provide quality education and a healthy atmosphere for children's holistic development.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col links-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="academics.html">Academics</a></li>
+                        <li><a href="facilities.html">Facilities</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-col">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Line Par, Moradabad, Uttar Pradesh, India - 244001</li>
+                        <li><i class="fas fa-phone"></i> +91 9876543210, +91 9876543211</li>
+                        <li><i class="fas fa-envelope"></i> info@suncitypublicschool.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 8:00 AM - 2:00 PM</li>
+                    </ul>
+                </div>
+                <div class="footer-col map-col">
+                    <h3>Our Location</h3>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.876234371573!2d78.7678883150496!3d28.72872278238398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390afbe5a8f6a3a9%3A0x4a7a6a9a0b1b2b3c!2sLine%20Par%2C%20Moradabad%2C%20Uttar%20Pradesh%20244001!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2023 Sun City Public School. All Rights Reserved.</p>
+                <p>Designed with <i class="fas fa-heart"></i> for Quality Education</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Gallery Filter
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    const filterValue = this.getAttribute('data-filter');
+
+                    galleryItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
