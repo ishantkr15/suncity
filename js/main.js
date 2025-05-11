@@ -259,3 +259,132 @@ const lightboxStyles = `
 const styleElement = document.createElement('style');
 styleElement.innerHTML = lightboxStyles;
 document.head.appendChild(styleElement);
+
+
+// Wait for the DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mainNav = document.querySelector('.main-nav ul');
+    
+    if (mobileMenuBtn && mainNav) {
+        mobileMenuBtn.addEventListener('click', function() {
+            mainNav.classList.toggle('show');
+            this.querySelector('i').classList.toggle('fa-times');
+            this.querySelector('i').classList.toggle('fa-bars');
+        });
+    }
+
+    // Tab Functionality
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+    
+    if (tabBtns.length > 0 && tabContents.length > 0) {
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all buttons and contents
+                tabBtns.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                // Show corresponding content
+                const tabId = this.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    }
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (mainNav.classList.contains('show')) {
+                    mainNav.classList.remove('show');
+                    mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+                    mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+                }
+            }
+        });
+    });
+
+    // Sticky Header
+    const header = document.querySelector('.header');
+    if (header) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                header.classList.add('sticky');
+            } else {
+                header.classList.remove('sticky');
+            }
+        });
+    }
+
+    // Team Member Bio Toggle
+    const teamMembers = document.querySelectorAll('.team-member');
+    teamMembers.forEach(member => {
+        member.addEventListener('click', function() {
+            const bio = this.querySelector('.member-bio');
+            if (bio) {
+                bio.classList.toggle('show');
+            }
+        });
+    });
+
+    // Current Year for Footer
+    const yearElement = document.querySelector('.footer-bottom p:first-child');
+    if (yearElement) {
+        const currentYear = new Date().getFullYear();
+        yearElement.innerHTML = yearElement.innerHTML.replace('2025', currentYear);
+    }
+
+    // Animation on Scroll
+    function animateOnScroll() {
+        const elements = document.querySelectorAll('.fade-in, .slide-up, .slide-left, .slide-right');
+        
+        elements.forEach(element => {
+            const elementPosition = element.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.2;
+            
+            if (elementPosition < screenPosition) {
+                element.classList.add('animated');
+            }
+        });
+    }
+    
+    window.addEventListener('scroll', animateOnScroll);
+    animateOnScroll(); // Run once on load
+});
+
+// Audio Player Controls
+document.addEventListener('DOMContentLoaded', function() {
+    const audioPlayer = document.querySelector('.anthem-audio audio');
+    const downloadBtn = document.querySelector('.anthem-audio .btn');
+    
+    if (audioPlayer && downloadBtn) {
+        downloadBtn.addEventListener('click', function(e) {
+            if (audioPlayer.paused) {
+                e.preventDefault();
+                audioPlayer.play();
+                downloadBtn.textContent = 'Playing...';
+                
+                audioPlayer.addEventListener('ended', function() {
+                    downloadBtn.textContent = 'Download Anthem';
+                }, { once: true });
+            }
+        });
+    }
+});
